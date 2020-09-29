@@ -4,11 +4,449 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My site</title>
+    
+    <!-- Fuentes -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- iconos -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />    
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <h1>Welcome to my site</h1>
-    <h2>Im mariana
+    <header class="header" id="bienvenido">
+        <img src="./assets/hamburguesa.svg" alt="" class="hamburguer">
+        <nav class="nav">
+            <a href="#bienvenido"></a>
+            <a href="#datos"></a>
+            <a href="galeria"></a>
+            <a href="formulario"></a>
+            <a href="footer"></a>
+        </nav>
+        <div class="container head">
+            <h1 class="title">Consultas en Linea</h1>
+            <p class="copy">Tu salud es lo mas importante para nosotros, queremos brindarte el mejor servicio de salud</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="datos container" id="datos">
+            <h2 class="subtitle">Datos de la salud en Bolivia</h2>
+            <div class="container-datos">
+                <img src="./assets/checklist.svg" alt=""> <!-- cambiar-->
+                <div class="lista-datos">
+
+                    <div class="dato">
+                        <h3 class="n-dato"><span class="number">1</span>Web Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, repellendus. Fuga accusantium ipsum odit nemo officiis nihil omnis excepturi eos?</p>
+                    </div>
+                    <div class="dato">
+                        <h3 class="n-dato"><span class="number">2</span>Web Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, repellendus. Fuga accusantium ipsum odit nemo officiis nihil omnis excepturi eos?</p>
+                    </div>
+                    <div class="dato">
+                        <h3 class="n-dato"><span class="number">3</span>Web Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, repellendus. Fuga accusantium ipsum odit nemo officiis nihil omnis excepturi eos?</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="galeria" id="galeria">
+            <div class="container">
+                <h2 class="subtitle"> Galeria de fotos</h2>
+                <div class="container-galeria">
+                    <img src="./assets/uno.jpg" class="img-gallery" alt="" />
+                    <img src="./assets/dos.jpg" class="img-gallery" alt="" />
+                    <img src="./assets/tres.jpg" class="img-gallery" alt="" />
+                    <img src="./assets/cuatro.jpg" class="img-gallery" alt="" />
+                    <img src="./assets/cinco.jpg" class="img-gallery" alt="" />
+                    <img src="./assets/seis.jpg" class="img-gallery" alt="" />
+                    <img src="./assets/siete.jpg" class="img-gallery" alt="" />
+                    <img src="./assets/ocho.jpg" class="img-gallery" alt="" />
+                    <img src="./assets/nueve.jpg" class="img-gallery" alt="" />
+                    <img src="./assets/diez.jpg" class="img-gallery" alt="" />
+                    <img src="./assets/once.jpg" class="img-gallery" alt="" />
+                    <img src="./assets/doce.jpg" class="img-gallery" alt="" />
+                </div>
+            </div>
+        </section>
+
+        <div class="image-light">
+            <img src="./assets/close.svg" alt="" class="close" />
+            <img src="" alt="" class="add-image" />
+        </div>
         
-    </h2>
+        <section class="formulario" id="formulario">
+            <h2 class="subtitle">Formulario de registro</h2>
+
+            <form action="" class="formulario" id="formulario">
+                <!-- Grupo: Usuario -->
+                <div class="formulario__grupo" id="grupo__usuario">
+                  <label for="usuario" class="formulario__label">Usuario</label>
+                  <div class="formulario__grupo-input">
+                    <input
+                      type="text"
+                      class="formulario__input"
+                      name="usuario"
+                      id="usuario"
+                      placeholder="john123"
+                    />
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                  <p class="formulario__input-error">
+                    El usuario tiene que ser de 4 a 16 dígitos y solo puede contener
+                    numeros, letras y guion bajo.
+                  </p>
+                </div>
+        
+                <!-- Grupo: Nombre -->
+                <div class="formulario__grupo" id="grupo__nombre">
+                  <label for="nombre" class="formulario__label">Nombre</label>
+                  <div class="formulario__grupo-input">
+                    <input
+                      type="text"
+                      class="formulario__input"
+                      name="nombre"
+                      id="nombre"
+                      placeholder="John Doe"
+                    />
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                  <p class="formulario__input-error">
+                    El nombre tiene que ser de hasta 40 dígitos y solo puede contener
+                    letras y espacios.
+                  </p>
+                </div>
+        
+                <!-- Grupo: Contraseña -->
+                <div class="formulario__grupo" id="grupo__password">
+                  <label for="password" class="formulario__label">Contraseña</label>
+                  <div class="formulario__grupo-input">
+                    <input
+                      type="password"
+                      class="formulario__input"
+                      name="password"
+                      id="password"
+                    />
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                  <p class="formulario__input-error">
+                    La contraseña tiene que ser de 4 a 12 dígitos.
+                  </p>
+                </div>
+        
+                <!-- Grupo: Contraseña 2 -->
+                <div class="formulario__grupo" id="grupo__password2">
+                  <label for="password2" class="formulario__label"
+                    >Repetir Contraseña</label
+                  >
+                  <div class="formulario__grupo-input">
+                    <input
+                      type="password"
+                      class="formulario__input"
+                      name="password2"
+                      id="password2"
+                    />
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                  <p class="formulario__input-error">
+                    Ambas contraseñas deben ser iguales.
+                  </p>
+                </div>
+        
+                <!-- Grupo: Correo Electronico -->
+                <div class="formulario__grupo" id="grupo__correo">
+                  <label for="correo" class="formulario__label"
+                    >Correo Electrónico</label
+                  >
+                  <div class="formulario__grupo-input">
+                    <input
+                      type="email"
+                      class="formulario__input"
+                      name="correo"
+                      id="correo"
+                      placeholder="correo@correo.com"
+                    />
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                  <p class="formulario__input-error">
+                    El correo solo puede contener letras, numeros, puntos, guiones y
+                    guion bajo.
+                  </p>
+                </div>
+        
+                <!-- Grupo: Teléfono -->
+                <div class="formulario__grupo" id="grupo__telefono">
+                  <label for="telefono" class="formulario__label">Teléfono</label>
+                  <div class="formulario__grupo-input">
+                    <input
+                      type="tel"
+                      class="formulario__input"
+                      name="telefono"
+                      id="telefono"
+                      placeholder="61368424"
+                    />
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                  <p class="formulario__input-error">
+                    El telefono solo puede contener numeros y el maximo son 8 dígitos.
+                  </p>
+                </div>
+        
+                <div class="formulario__mensaje" id="formulario__mensaje">
+                  <p>
+                    <i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor
+                    rellena el formulario correctamente.
+                  </p>
+                </div>
+        
+                <div class="formulario__grupo formulario__grupo-btn-enviar">
+                  <button type="submit" class="formulario__btn">Enviar</button>
+                  <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
+                    ¡Formulario enviado exitosamente!
+                  </p>
+                </div>
+              </form>
+        </section>
+
+        <section class="container-formulario-medico" id="container-formulario-medico">
+            <h2 class="subtitle">MEDICAL RECORD</h2>
+            <form action="" class="formulario" id="formulario-medico">
+                
+                <!-- Fehca de Nacimiento -->
+                <div class="formulario__grupo" id="grupo__nacimiento">
+                  <label for="nacimiento" class="formulario__label">Fecha de nacimiento</label>
+                  <div class="formulario__grupo-input">
+                    <input
+                      type="text"
+                      class="formulario__input"
+                      name="nacimiento"
+                      id="nacimiento"
+                      placeholder="dd/mm/yy"
+                    />
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                </div>
+        
+                <!-- Grupo: Nombre -->
+                <div class="formulario__grupo" id="grupo__actual">
+                  <label for="actual" class="formulario__label">En caso de estar bajo algun tratamiento medico, cual es este?</label>
+                  <div class="formulario__grupo-input">
+                    <input
+                      type="text"
+                      class="formulario__input"
+                      name="actual"
+                      id="actual"
+                      placeholder="Mi tratamiento actual es .."
+                    />
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                </div>
+        
+                <!-- cirugia -->
+                <div class="formulario__grupo" id="grupo__cirugia">
+                  <label for="cirugia" class="formulario__label">En caso de haberse sometido en su vida, cual o cuales fueron?</label>
+                  <div class="formulario__grupo-input">
+                    <input
+                      type="text"
+                      class="formulario__input"
+                      name="cirugia"
+                      id="cirugia"
+                      placeholder="Me he sometido a .."
+                    />
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                </div>
+        
+                <!-- especial -->
+                <div class="formulario__grupo" id="grupo__especial">
+                  <label for="especial" class="formulario__label"
+                    >Tiene usted algun tipo de condicion especial?</label
+                  >
+                  <div class="formulario__grupo-input">
+                    <input
+                      type="text"
+                      class="formulario__input"
+                      name="especial"
+                      id="especial"
+                      placeholder="Mi condicion especial es .."
+                    />
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                </div>
+        
+
+                <div class="formulario_check" id="grupo_check1">
+                    <h2>Tiene o tuvo..</h2>
+                    <label class="formulario__label">
+                        <input
+                          class="formulario__checkbox"
+                          type="checkbox"
+                          name="terminos"
+                          id="terminos"
+                        />
+                        Hospitalizacion por culaquier motivo
+                      </label>
+                </div>
+
+                <div class="formulario_check" id="grupo_check2">
+
+                    <label class="formulario__label">
+                        <input
+                          class="formulario__checkbox"
+                          type="checkbox"
+                          name="terminos"
+                          id="terminos"
+                        />
+                        Alergias
+                      </label>
+                </div>          
+                
+                <div class="formulario_check" id="grupo_check3">
+
+                    <label class="formulario__label">
+                        <input
+                          class="formulario__checkbox"
+                          type="checkbox"
+                          name="terminos"
+                          id="terminos"
+                        />
+                        Problemas del corazon
+                      </label>
+                </div>         
+                
+                <div class="formulario_check" id="grupo_check4">
+
+                    <label class="formulario__label">
+                        <input
+                          class="formulario__checkbox"
+                          type="checkbox"
+                          name="terminos"
+                          id="terminos"
+                        />
+                        Presion baja o alta
+                      </label>
+                </div>     
+                
+                <div class="formulario_check" id="grupo_check5">
+
+                    <label class="formulario__label">
+                        <input
+                          class="formulario__checkbox"
+                          type="checkbox"
+                          name="terminos"
+                          id="terminos"
+                        />
+                        Problemas alimenticion
+                      </label>
+                </div>        
+                
+                <div class="formulario_check" id="grupo_check6">
+
+                    <label class="formulario__label">
+                        <input
+                          class="formulario__checkbox"
+                          type="checkbox"
+                          name="terminos"
+                          id="terminos"
+                        />
+                        Diabetes
+                      </label>
+                </div>   
+                
+                <div class="formulario_check" id="grupo_check7">
+
+                    <label class="formulario__label">
+                        <input
+                          class="formulario__checkbox"
+                          type="checkbox"
+                          name="terminos"
+                          id="terminos"
+                        />
+                        Tumores
+                      </label>
+                </div>  
+                
+                <div class="formulario_check" id="grupo_check8">
+                    <label class="formulario__label">
+                        <input
+                          class="formulario__checkbox"
+                          type="checkbox"
+                          name="terminos"
+                          id="terminos"
+                        />
+                        VIH/AIDS
+                      </label>
+                </div>     
+                
+                <div class="formulario_check" id="grupo_check9">
+                    <label class="formulario__label">
+                        <input
+                          class="formulario__checkbox"
+                          type="checkbox"
+                          name="terminos"
+                          id="terminos"
+                        />
+                        Problemas psicologicos
+                      </label>
+                </div>   
+                
+                <div class="formulario_check" id="grupo_check10">
+                    <label class="formulario__label">
+                        <input
+                          class="formulario__checkbox"
+                          type="checkbox"
+                          name="terminos"
+                          id="terminos"
+                        />
+                        Problemas de corazon
+                      </label>
+                </div>                
+        
+                <div class="formulario__mensaje" id="formulario__mensaje">
+                  <p>
+                    <i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor
+                    rellena el formulario correctamente.
+                  </p>
+                </div>
+        
+                <div class="formulario__grupo formulario__grupo-btn-enviar">
+                  <button type="submit" class="formulario__btn">Enviar</button>
+                  <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
+                    ¡Formulario enviado exitosamente!
+                  </p>
+                </div>
+              </form>            
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container footer-content">
+          <div class="contact-us">
+            <h2 class="brand">Brand name here</h2>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+          </div>
+  
+          <div class="social-media">
+            <a href="./" class="social-media-icon">
+              <i class="bx bxl-facebook"></i>
+            </a>
+            <a href="./" class="social-media-icon">
+              <i class="bx bxl-twitter"></i>
+            </a>
+            <a href="./" class="social-media-icon">
+              <i class="bx bxl-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div class="line"></div>
+      </footer>
 </body>
 </html>
